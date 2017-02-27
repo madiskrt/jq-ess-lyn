@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$("document").ready(function(){
+			$("p").css("border","3px solid red");
+			$(".a").css("border","3px solid green");
+			$("#b").css("border","3px solid blue");
+			//descendant
+			$("ul li.a").css("border","3px solid yellow");
+			//paragraph that's next to smth
+			$("ul + p").css("border","3px solid pink");
+			//siblings
+			$("#list1 ~ p").css("border","3px solid brown");
+		});
+	</script>
+</head>
+<body>
+
+<p>Siia mingi suvakas tekst</p>
+<p class="a">Siia mingi suvakas tekst</p>
+<p id="b">Siia mingi suvakas tekst</p>
+
+<ul id="list1">
+	<li>lorem</li>
+	<li>ipsum</li>
+	<li class="a">list</li>
+</ul>
+	<p>Give me the p that's next to ul</p>
+	<p>Siblings1</p>
+	<p>Siblings2</p>
+</body>
+</html>

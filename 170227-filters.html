@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$("document").ready(function(){
+			//first paragraph tag
+			$("p:first").css("border","3px solid red");
+			$("p:last").css("border","3px solid red");
+			$("input:last").css("border","3px solid red");
+			$("p:even").css("border","3px solid green");
+			//paragraphs that are not equal to index 2
+			$("p:not(p:eq(2))").css("border","3px solid blue");
+			$("p[class]").css("border","3px solid yellow");
+			$("p[id=para1]").css("border","3px solid brown");
+		});
+	</script>
+</head>
+<body>
+
+<p>Siia mingi suvakas tekst</p>
+<p class="a">Siia mingi suvakas tekst</p>
+<p id="b">Siia mingi suvakas tekst</p>
+
+<ul id="list1">
+	<li>lorem</li>
+	<li>ipsum</li>
+	<li class="a">list</li>
+</ul>
+	<p>Give me the p that's next to ul</p>
+	<p id="para1">Siblings1</p>
+	<p>Siblings2</p>
+<input type="text" name="" id="inp1">
+<input type="text" name="" id="inp2">
+</body>
+</html>
