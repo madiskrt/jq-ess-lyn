@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$("document").ready(function(){
+
+			$("img").attr({width: "600px"});
+			$("a").attr("target", "_blank");
+
+			$("a").removeAttr("href");
+
+			$("img").attr({src:"img/filters.jpg", alt:"Filters"});
+		});
+
+	</script>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+
+<p>Siia mingi suvakas tekst</p>
+<p class="a">Siia mingi 3 suvakas tekst</p>
+<p id="b">Siia mingi suvakas tekst</p>
+
+<ul id="list1">
+	<li class="a">lorem</li>
+	<li>ipsum 3</li>
+	<li class="a">list</li>
+</ul>
+	<p>Give me the p that's next 3 to ul</p>
+	<p id="para1">Siblings1</p>
+	<p>Siblings2</p>
+<input type="text" name="" id="inp1">
+<input type="text" name="" id="inp2" value="3">
+
+<form id="form1">
+	<input type="text" name="">
+</form>
+
+<p id="rep">Will be replaced</p>
+<p>Last paragraph text to be replaced.</p>
+
+<a href="img/attributes.jpg">
+<img src="img/attributes.jpg" alt="image"></a>
+
+</body>
+</html>
