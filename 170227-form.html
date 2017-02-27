@@ -5,14 +5,7 @@
 	<script type="text/javascript" src="jquery-3.1.1.js"></script>
 	<script type="text/javascript">
 		$("document").ready(function(){
-			//paragraphs that contain text string "3":
-			//$("p:contains(3)").css("border","3px solid blue");
-			$(":contains(3)").css("border","3px solid blue");
-			//paragraphs that are parents
-			$("p:parent").css("border","3px solid yellow");
-			//selectring ul if it has li item with class a
-			$("ul:has(li[class=a])").css("border","3px solid red");
-			$("ul li:nth-child(1)").css("border","3px solid brown");
+			$("form :text").css("border","3px solid blue");
 		});
 	</script>
 	<style type="text/css">
@@ -35,5 +28,10 @@
 	<p>Siblings2</p>
 <input type="text" name="" id="inp1">
 <input type="text" name="" id="inp2" value="3">
+
+<form>
+	<input type="text" name="">
+</form>
+
 </body>
 </html>
