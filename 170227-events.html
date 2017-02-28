@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		
+	$(function(){
+		$("#evtTarget").on("mouseover mouseleave", highlight);
+
+		$("#evtTarget").on("click", function(evt){
+			$("#evtTarget").off("mouseover mouseleave", highlight);
+			$("#evtTarget").html("<p>Effect shut off</p>");
+		})
+	});
+
+	function highlight(evt){
+		$("#evtTarget").toggleClass("highlighted");
+	}
+
+	</script>
+	<style type="text/css">
+		.normal {width: 300px; height: 200px; background: yellow; margin: 20px; color: blue;}
+		.highlighted {background: gray; color: black}
+	</style>
+</head>
+<body>
+
+<div id="evtTarget" class="normal">Mouse over this div to see the effect</div>
+
+</body>
+</html>
