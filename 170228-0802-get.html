@@ -1,0 +1,43 @@
+<!DOCTYPE html><html><head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		
+	$("document").ready(function() {
+		getData();
+	});
+
+	function getData(){
+		
+		//$.get("testdata.txt", successFn);
+
+		$("#content").load("testdata.txt");
+
+	}
+
+	function successFn(result){
+		console.log("Setting result");
+		//here we need to say what to do when the data comes back, result will be the data that came back from the server:
+		$("#content").append(result);
+	}
+	function errorFn(result){
+		console.log("There was an error");
+	}
+
+	</script>
+	<style type="text/css">
+
+	body {
+		display: block; margin: 10px;
+	}
+
+	</style>
+</head>
+<body>
+
+<p id="content"></p>
+<hr>
+
+
+</body>
+</html>
