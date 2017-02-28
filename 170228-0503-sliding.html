@@ -1,0 +1,46 @@
+<!DOCTYPE html><html><head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		
+	//when the page loads
+	$(function(){
+		
+		$("#slideup").click(function(){
+			$("#theDiv").slideUp("normal");
+			//.slideUp(4000, function(){ alert("done");})
+		});
+
+		$("#slidedown").click(function(){
+			$("#theDiv").slideDown("normal");
+		});
+
+		$("#toggle").click(function(){
+			$("#theDiv").slideToggle("slow");
+		});
+	});
+
+	</script>
+	<style type="text/css">
+
+	div#theDiv {
+		width: 200px; height: 150px; margin: 20px; background: aqua;
+	}
+
+	</style>
+</head>
+<body>
+
+<div id="theDiv">Sample DIV</div>
+
+<button id="slideup">slideup</button>
+<button id="slidedown">slidedown</button>
+<button id="toggle">toggle</button>
+
+
+<hr>
+<img src="img/170228-0503-sliding.jpg" border="1">
+<img src="img/sliding.jpg" border="1">
+
+</body>
+</html>
