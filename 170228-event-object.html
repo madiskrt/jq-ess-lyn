@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		
+	$(function(){
+		$("div").click(function(evt){
+			$(this).html("pageX: " + evt.pageX + ", pageY: " + evt.pageY + ", type: " + evt.type + ", target: " + evt.target);
+		})
+	});
+
+	</script>
+	<style type="text/css">
+		.normal {width: 300px; height: 100px; background: yellow; margin: 20px; color: blue;}
+		.highlighted {background: Silver; color: black}
+	</style>
+</head>
+<body>
+
+<div id="Div1" class="normal">This is Div1</div>
+<div id="Div2" class="normal">This is Div2</div>
+<div id="Div3" class="normal">This is Div3</div>
+
+<img src="img/170228-event-object.jpg" border="1">
+<img src="img/event-object.jpg" border="1">
+
+</body>
+</html>

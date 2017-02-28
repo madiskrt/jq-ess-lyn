@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		
+	$(function(){
+		$("#theList tr:even").addClass("stripe1");
+		$("#theList tr:odd").addClass("stripe2");
+
+		$("#theList tr").hover(
+			function(){
+				$(this).toggleClass("highlight");
+			},
+			function(){
+				$(this).toggleClass("highlight");
+			}
+		);
+
+		//event delegation
+		// $("#theList tr").on("click", function(evt){
+		// 	alert($(this).text());
+		// })
+
+		//event bubbling, listening events that came from within tr
+		$("#theList").on("click", "tr", function(evt){
+			alert($(this).text());
+		})
+	});
+
+	</script>
+	<style type="text/css">
+
+	table {
+		border: 1pt solid gray; width: 300px; margin: 10px;
+	}
+	.stripe1 {background-color: yellow;}
+	.stripe2 {background-color: silver;}
+	.highlight {background-color: orange; font-weight: bold;}
+
+	</style>
+</head>
+<body>
+
+<table id="theList">
+	<thead>
+		<tr>
+			<th>Player</th>
+			<th>Price</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Messi</td>
+			<td>200.00M</td>
+		</tr>
+		<tr>
+			<td>Neymar</td>
+			<td>80.00M</td>
+		</tr>
+		<tr>
+			<td>Suarez</td>
+			<td>90.00M</td>
+		</tr>
+		<tr>
+			<td>Pique</td>
+			<td>19.00M</td>
+		</tr>
+		<tr>
+			<td>Rafinha</td>
+			<td>12.00M</td>
+		</tr>
+		<tr>
+			<td>Messi</td>
+			<td>200.00M</td>
+		</tr>
+		<tr>
+			<td>Neymar</td>
+			<td>80.00M</td>
+		</tr>
+		<tr>
+			<td>Suarez</td>
+			<td>90.00M</td>
+		</tr>
+		<tr>
+			<td>Pique</td>
+			<td>19.00M</td>
+		</tr>
+		<tr>
+			<td>Rafinha</td>
+			<td>12.00M</td>
+		</tr>
+	</tbody>
+
+</table>
+
+<img src="img/170228-0406-table.jpg" border="1">
+
+</body>
+</html>

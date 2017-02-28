@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		
+	//event handler that only fires once
+	$(function(){
+		$("div").one("click", function(evt){
+			$(this).css({background: "red", cursor: "auto"});
+		});
+	});
+
+	</script>
+	<style type="text/css">
+		div {width: 60px; height: 60px; background: silver; margin: 20px; color: black; float: left; cursor: pointer;}
+		p {font-size: 18pt;}
+	</style>
+</head>
+<body>
+
+<div id="Div1" class="normal">This is Div1</div>
+<div id="Div2" class="normal">This is Div2</div>
+<div id="Div3" class="normal">This is Div3</div>
+<div id="Div4" class="normal">This is Div4</div>
+<div id="Div5" class="normal">This is Div5</div>
+
+<img src="img/170228-0405-event-functions.jpg" border="1">
+<img src="img/event-functions.jpg" border="1">
+
+
+</body>
+</html>
