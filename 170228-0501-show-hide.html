@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		
+	$(function(){
+		/*$("#show").click(function(){
+			//passing in speed
+			$("#theDiv").show("normal");
+		});*/
+
+		$("#show").click(function(){
+			//duration 5 sec and callback func with alert
+			$("#theDiv").show(5000, function(){
+				alert("done showing");
+			});
+		});
+
+		$("#hide").click(function(){
+			$("#theDiv").hide("normal");
+		});
+		$("#toggle").click(function(){
+			$("#theDiv").toggle("slow");
+		});
+	});
+
+	</script>
+	<style type="text/css">
+
+	div#theDiv {
+		width: 200px; height: 150px; margin: 20px; background: orange;
+	}
+
+	</style>
+</head>
+<body>
+
+<div id="theDiv">Sample DIV</div>
+
+<button id="show">show</button>
+<button id="hide">hide</button>
+<button id="toggle">toggle</button>
+
+<hr>
+<img src="img/170228-0501-show-hide.jpg" border="1">
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html><html><head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		
+	$(function(){
+		
+		$("#fadein").click(function(){
+			$("#theDiv").fadeIn("normal");
+		});
+
+		$("#fadeout").click(function(){
+			$("#theDiv").fadeOut("normal");
+			//fadeOut(5000, function(){ alert("done")})
+		});
+
+		$("#fadeto3").click(function(){
+			$("#theDiv").fadeTo("slow", 0.3);
+		});
+
+		$("#fadeup").click(function(){
+			$("#theDiv").fadeTo("slow", 1.0);
+		});
+
+	});
+
+	</script>
+	<style type="text/css">
+
+	div#theDiv {
+		width: 200px; height: 150px; margin: 20px; background: lime;
+	}
+
+	</style>
+</head>
+<body>
+
+<div id="theDiv">Sample DIV</div>
+
+<button id="fadein">fadein</button>
+<button id="fadeout">fadeout</button>
+<button id="fadeto3">fadeto3</button>
+<button id="fadeup">fadeup</button>
+
+<hr>
+<img src="img/170228-0502-fading.jpg" border="1">
+<img src="img/fading.jpg" border="1">
+
+</body>
+</html>
