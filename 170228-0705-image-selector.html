@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		
+	//script to handle image clicking
+	$(function(){
+		//all of the link tags that are enclosing images that have gallery class
+		$("a:has(img.gallery)").click(function(){
+			//will point to the link abject
+			var largePath = $(this).attr("href");
+			var caption = $(this).attr("title");
+			//console.log(this);
+			$("#photo_large").attr({src: largePath});
+			$("#caption1").text(caption);
+			//we don't want the links to be followed
+			return false;
+		});
+	});
+
+	</script>
+	<style type="text/css">
+
+	
+
+	</style>
+</head>
+<body>
+
+<div id="sidebar">
+	<a href="img/images/img1.jpg" title="lapsed"><img id="thumb_01" src="img/images/img1.jpg" width="150" class="gallery" /></a>
+	<a href="img/images/img2.jpg" title="kass aknal"><img id="thumb_02" src="img/images/img2.jpg" width="150" class="gallery" /></a>
+	<a href="img/images/img3.jpg" title="Salmistu rannas"><img id="thumb_03" src="img/images/img3.jpg" width="150" class="gallery" /></a>
+	<a href="img/images/img4.jpg" title="rattaretkel"><img id="thumb_04" src="img/images/img4.jpg" width="150" class="gallery" /></a>
+</div>
+
+<img id="photo_large" src="">
+<blockquote id="caption1"></blockquote>
+
+<hr>
+<img src="img/170228-0705-image-selector.jpg" border="1">
+
+</body>
+</html>

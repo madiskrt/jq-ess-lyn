@@ -1,0 +1,53 @@
+<!DOCTYPE html><html><head>
+	<title></title>
+	<!-- <script type="text/javascript" src="jquery-3.1.1.js"></script> -->
+	<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+	<script type="text/javascript">
+		
+	//when user hovers the thumbnail will appear
+	$(function() {
+            $("#viewlarger").hover(
+            function() {
+                var offset = $("#gearItem").offset();
+                $("#tooltip1").css("top", offset.top).css("left", offset.left).css("display", "block");
+                $("#tooltip1").animate({ opacity: 1.0 }, 300);
+            },
+            function() {
+                $("#tooltip1").animate({ opacity: 0.0 }, 300, function() {
+                    $("#tooltip1").css("display", "none");
+                });
+            }
+        );
+        });
+
+	</script>
+	<style type="text/css">
+
+	div#lisa {width: 200px; height: 200px; background: lime; margin: 10px;}
+
+	.tooltipContent {
+		position: absolute;
+		display: none;
+		opacity: 0.0;
+	}
+
+	</style>
+</head>
+<body>
+
+<div id="lisa">Lisadiv</div>
+
+<div id="gearItem">
+	<img src="img/images/img2.jpg" width="200">
+	<p>view larger <a href="larger.htm" id="viewlarger" target="_blank">[+]</a></p>
+</div>
+
+<div class="tooltipContent" id="tooltip1">
+	<img src="img/images/img2.jpg" width="500" />
+</div>
+
+<hr>
+<img src="img/170228-0704-tooltips.jpg" border="1">
+
+</body>
+</html>
